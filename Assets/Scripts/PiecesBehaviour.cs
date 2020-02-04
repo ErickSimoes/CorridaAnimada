@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PiecesBehaviour : MonoBehaviour {
-    public RectTransform pieces;
-    public RectTransform referencePieces;
-    float yDiference = 0;
+    public RectTransform piece;
+    public RectTransform[] referencePieces;
+    int pieceReference = 0;
 
     void Start() {
-        yDiference = pieces.position.y - referencePieces.position.y;
+        
     }
 
     void Update() {
-        Vector2 fixedPosition = new Vector2(referencePieces.position.x, referencePieces.position.y + yDiference);
-        pieces.position = Vector2.MoveTowards(pieces.position, fixedPosition, 1f);
+        piece.position = Vector2.MoveTowards(piece.position, referencePieces[pieceReference].position, 1f);
     }
+
+    public void MoveToNextPosition() {
+        if (referencePieces.Length - 1 > pieceReference) {
+            pieceReference++;
+        }
+        
+    }
+
 }
