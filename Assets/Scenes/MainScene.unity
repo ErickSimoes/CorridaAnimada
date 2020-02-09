@@ -264,12 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 407812600}
-  referencePieces:
-  - {fileID: 2098093593}
-  - {fileID: 1663710543}
-  - {fileID: 1114748961}
-  - {fileID: 1025818642}
-  - {fileID: 864239494}
+  pieceReferenceGroup: {fileID: 2094722071}
 --- !u!1 &128782073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,12 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 814443008}
-  referencePieces:
-  - {fileID: 1391779137}
-  - {fileID: 1350625249}
-  - {fileID: 452878033}
-  - {fileID: 2054957622}
-  - {fileID: 1462893130}
+  pieceReferenceGroup: {fileID: 224692280}
 --- !u!1 &1480655651
 GameObject:
   m_ObjectHideFlags: 0
