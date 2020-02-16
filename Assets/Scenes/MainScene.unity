@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 407812600}
   pieceReferenceGroup: {fileID: 2094722071}
+  VictoryPanel: {fileID: 0}
 --- !u!1 &128782073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,11 +1535,11 @@ GameObject:
   - component: {fileID: 1467243431}
   m_Layer: 5
   m_Name: VictoryPanel
-  m_TagString: Untagged
+  m_TagString: VictoryPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1467243430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1739,6 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 814443008}
   pieceReferenceGroup: {fileID: 224692280}
+  VictoryPanel: {fileID: 0}
 --- !u!1 &1480655651
 GameObject:
   m_ObjectHideFlags: 0

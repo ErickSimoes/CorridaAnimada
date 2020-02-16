@@ -6,6 +6,7 @@ public class PiecesBehaviour : MonoBehaviour {
     public RectTransform piece;
     public GameObject pieceReferenceGroup;
     RectTransform[] referencePieces;
+    static GameObject VictoryPanel;
     int pieceReference = 0;
 
     void Start() {
@@ -14,6 +15,12 @@ public class PiecesBehaviour : MonoBehaviour {
 
         for (int i = 0; i < numPieces; i++) {
             referencePieces.SetValue(pieceReferenceGroup.transform.GetChild(i), i);
+        }
+
+        
+        if (!VictoryPanel) {
+            VictoryPanel = GameObject.FindGameObjectWithTag("VictoryPanel");
+            VictoryPanel.SetActive(false);
         }
     }
 
@@ -25,7 +32,10 @@ public class PiecesBehaviour : MonoBehaviour {
         if (referencePieces.Length - 1 > pieceReference) {
             pieceReference++;
         }
-        
+
+        if (pieceReference == referencePieces.Length - 1) {
+            VictoryPanel.SetActive(true);
+        }
     }
 
 }
