@@ -265,7 +265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 407812600}
   pieceReferenceGroup: {fileID: 2094722071}
-  VictoryPanel: {fileID: 0}
 --- !u!1 &128782073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,7 +1739,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   piece: {fileID: 814443008}
   pieceReferenceGroup: {fileID: 224692280}
-  VictoryPanel: {fileID: 0}
 --- !u!1 &1480655651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b85db668814d53d40bc2789815145de1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d66f0441bcccc9e41b2447133f98e756, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
