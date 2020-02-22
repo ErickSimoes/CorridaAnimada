@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PiecesBehaviour : MonoBehaviour {
     public GameObject piece;
-    public GameObject pieceReferenceGroup;
-    RectTransform[] referencePieces;
+    public GameObject ReferencePositionGroup;
+    RectTransform[] referencePosition;
     public float movimenteDuration = 1f;
     Vector3 targetPosition;
     Vector3 yFixPosition;
@@ -13,11 +13,11 @@ public class PiecesBehaviour : MonoBehaviour {
     int pieceReference = 0;
 
     void Start() {
-        int numPieces = pieceReferenceGroup.transform.childCount;
-        referencePieces = new RectTransform[numPieces];
+        int numPieces = ReferencePositionGroup.transform.childCount;
+        referencePosition = new RectTransform[numPieces];
 
         for (int i = 0; i < numPieces; i++) {
-            referencePieces.SetValue(pieceReferenceGroup.transform.GetChild(i), i);
+            referencePosition.SetValue(ReferencePositionGroup.transform.GetChild(i), i);
         }
 
         if (!VictoryPanel) {
@@ -25,15 +25,15 @@ public class PiecesBehaviour : MonoBehaviour {
             VictoryPanel.SetActive(false);
         }
         
-        yFixPosition = new Vector3(0, piece.transform.position.y - referencePieces[0].position.y, 0);
+        yFixPosition = new Vector3(0, piece.transform.position.y - referencePosition[0].position.y, 0);
     }
     public void MoveToNextPosition() {
-        if (referencePieces.Length - 1 > pieceReference) {
-            targetPosition = referencePieces[pieceReference++].position + yFixPosition;
+        if (referencePosition.Length - 1 > pieceReference) {
+            targetPosition = referencePosition[pieceReference++].position + yFixPosition;
         }
 
         //TODO: Active this panel only in the end of movimentation
-        if (pieceReference == referencePieces.Length - 1) {
+        if (pieceReference == referencePosition.Length - 1) {
             VictoryPanel.SetActive(true);
         }
 
