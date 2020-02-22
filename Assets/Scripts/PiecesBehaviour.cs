@@ -6,6 +6,7 @@ public class PiecesBehaviour : MonoBehaviour {
     public RectTransform piece;
     public GameObject pieceReferenceGroup;
     RectTransform[] referencePieces;
+    public float movimenteDuration = 1f;
     Vector3 targetPosition;
     Vector3 yFixPosition;
     static GameObject VictoryPanel;
@@ -40,8 +41,7 @@ public class PiecesBehaviour : MonoBehaviour {
     }
     IEnumerator MovePiece(Vector3 target) {
         while (piece.position != target) {
-            //TODO: Move time needs be public
-            piece.position = Vector3.MoveTowards(piece.position, target, 1f);
+            piece.position = Vector3.MoveTowards(piece.position, target, movimenteDuration);
             yield return null;
         }
     }
