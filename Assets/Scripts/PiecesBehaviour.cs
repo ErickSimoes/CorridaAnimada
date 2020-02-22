@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PiecesBehaviour : MonoBehaviour {
-    public RectTransform piece;
+    public GameObject piece;
     public GameObject pieceReferenceGroup;
     RectTransform[] referencePieces;
     public float movimenteDuration = 1f;
@@ -24,8 +24,8 @@ public class PiecesBehaviour : MonoBehaviour {
             VictoryPanel = GameObject.FindGameObjectWithTag("VictoryPanel");
             VictoryPanel.SetActive(false);
         }
-
-        yFixPosition = new Vector3(0, piece.position.y - referencePieces[0].position.y, 0);
+        
+        yFixPosition = new Vector3(0, piece.transform.position.y - referencePieces[0].position.y, 0);
     }
     public void MoveToNextPosition() {
         if (referencePieces.Length - 1 > pieceReference) {
@@ -40,8 +40,8 @@ public class PiecesBehaviour : MonoBehaviour {
         StartCoroutine(MovePiece(targetPosition));
     }
     IEnumerator MovePiece(Vector3 target) {
-        while (piece.position != target) {
-            piece.position = Vector3.MoveTowards(piece.position, target, movimenteDuration);
+        while (piece.transform.position != target) {
+            piece.transform.position = Vector3.MoveTowards(piece.transform.position, target, movimenteDuration);
             yield return null;
         }
     }
