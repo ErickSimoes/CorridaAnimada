@@ -8,7 +8,7 @@ public class PiecesBehaviour : MonoBehaviour {
     RectTransform[] referencePieces;
     //TODO: Rename position to target
     Vector3 position;
-    Vector3 positionReference;
+    Vector3 yFixPosition;
     static GameObject VictoryPanel;
     int pieceReference = 0;
 
@@ -25,11 +25,11 @@ public class PiecesBehaviour : MonoBehaviour {
             VictoryPanel.SetActive(false);
         }
 
-        positionReference = new Vector3(0, piece.position.y - referencePieces[0].position.y, 0);
+        yFixPosition = new Vector3(0, piece.position.y - referencePieces[0].position.y, 0);
     }
     public void MoveToNextPosition() {
         if (referencePieces.Length - 1 > pieceReference) {
-            position = referencePieces[pieceReference++].position + positionReference;
+            position = referencePieces[pieceReference++].position + yFixPosition;
         }
 
         //TODO: Active this panel only in the end of movimentation
