@@ -43,9 +43,10 @@ public class PiecesBehaviour : MonoBehaviour {
 
         StartCoroutine(MovePiece(targetPosition));
     }
+
     IEnumerator MovePiece(Vector3 target) {
         while (piece.transform.position != target) {
-            piece.transform.position = Vector3.MoveTowards(piece.transform.position, target, movimenteDuration);
+            piece.transform.position = Vector3.MoveTowards(piece.transform.position, target, movimenteDuration * Time.deltaTime);
             yield return null;
         }
     }
