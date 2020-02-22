@@ -264,7 +264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 1673689008}
-  pieceReferenceGroup: {fileID: 365090975}
   movimenteDuration: 1
 --- !u!1 &128743818
 GameObject:
@@ -613,7 +612,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224770623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 224770625}
+        m_MethodName: MoveToNextPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &224770623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 774596342}
-  pieceReferenceGroup: {fileID: 0}
   movimenteDuration: 1
 --- !u!1 &226125697
 GameObject:
@@ -2061,7 +2070,7 @@ GameObject:
   - component: {fileID: 1408573227}
   m_Layer: 0
   m_Name: ReferencePositionGroup
-  m_TagString: Untagged
+  m_TagString: ReferencePosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2303,7 +2312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 545576670}
-  pieceReferenceGroup: {fileID: 365090975}
   movimenteDuration: 1
 --- !u!1 &1480655651
 GameObject:
@@ -2739,7 +2747,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1735125758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735125760}
+        m_MethodName: MoveToNextPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1735125758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,7 +2808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 1021943150}
-  pieceReferenceGroup: {fileID: 0}
   movimenteDuration: 1
 --- !u!1 &1852380652
 GameObject:
