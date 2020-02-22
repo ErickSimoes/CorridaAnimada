@@ -36,11 +36,6 @@ public class PiecesBehaviour : MonoBehaviour {
             targetPosition = referencePosition[pieceReference++].transform.position + yFixPosition;
         }
 
-        //TODO: Active this panel only in the end of movimentation
-        if (pieceReference >= referencePosition.Length) {
-            VictoryPanel.SetActive(true);
-        }
-
         if (previousCoroutine != null) {
             StopCoroutine(previousCoroutine);
         }
@@ -52,6 +47,10 @@ public class PiecesBehaviour : MonoBehaviour {
         while (piece.transform.position != target) {
             piece.transform.position = Vector3.MoveTowards(piece.transform.position, target, movimenteDuration * Time.deltaTime);
             yield return null;
+        }
+
+        if (pieceReference >= referencePosition.Length) {
+            VictoryPanel.SetActive(true);
         }
     }
 
