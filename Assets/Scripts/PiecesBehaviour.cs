@@ -11,15 +11,15 @@ public class PiecesBehaviour : MonoBehaviour {
     Vector3 yFixPosition;
     static GameObject VictoryPanel;
     int pieceReference = 0;
+    Coroutine previousCoroutine;
 
     void Start() {
-        if(!ReferencePositionGroup) {
+        if (!ReferencePositionGroup) {
             ReferencePositionGroup = GameObject.FindGameObjectWithTag("ReferencePosition");
         }
 
         int numPieces = ReferencePositionGroup.transform.childCount;
         referencePosition = new GameObject[numPieces];
-
         for (int i = 0; i < numPieces; i++) {
             referencePosition.SetValue(ReferencePositionGroup.transform.GetChild(i).gameObject, i);
         }
@@ -28,20 +28,24 @@ public class PiecesBehaviour : MonoBehaviour {
             VictoryPanel = GameObject.FindGameObjectWithTag("VictoryPanel");
             VictoryPanel.SetActive(false);
         }
-        
+
         yFixPosition = new Vector3(0, piece.transform.position.y - referencePosition[0].transform.position.y, 0);
     }
     public void MoveToNextPosition() {
-        if (referencePosition.Length - 1 > pieceReference) {
+        if (referencePosition.Length > pieceReference) {
             targetPosition = referencePosition[pieceReference++].transform.position + yFixPosition;
         }
 
         //TODO: Active this panel only in the end of movimentation
-        if (pieceReference == referencePosition.Length - 1) {
+        if (pieceReference >= referencePosition.Length) {
             VictoryPanel.SetActive(true);
         }
 
-        StartCoroutine(MovePiece(targetPosition));
+        if (previousCoroutine != null) {
+            StopCoroutine(previousCoroutine);
+        }
+
+        previousCoroutine = StartCoroutine(MovePiece(targetPosition));
     }
 
     IEnumerator MovePiece(Vector3 target) {
