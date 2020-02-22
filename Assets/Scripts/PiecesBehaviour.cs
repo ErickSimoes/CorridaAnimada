@@ -25,10 +25,8 @@ public class PiecesBehaviour : MonoBehaviour {
             VictoryPanel.SetActive(false);
         }
 
-        //position = piece.position;
         float yReference = piece.position.y - referencePieces[0].position.y;
         positionReference = new Vector3(0, yReference, 0);
-        print(yReference);
     }
     public void MoveToNextPosition() {
         if (referencePieces.Length - 1 > pieceReference) {
