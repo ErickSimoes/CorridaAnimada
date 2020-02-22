@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 407812600}
-  pieceReferenceGroup: {fileID: 0}
+  pieceReferenceGroup: {fileID: 365090975}
 --- !u!1 &128782073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piece: {fileID: 814443008}
-  pieceReferenceGroup: {fileID: 0}
+  pieceReferenceGroup: {fileID: 365090975}
 --- !u!1 &1480655651
 GameObject:
   m_ObjectHideFlags: 0
