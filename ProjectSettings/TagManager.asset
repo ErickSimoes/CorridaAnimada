@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - ReferencePosition
   - Pieces
+  - PiecesSelected
   layers:
   - Default
   - TransparentFX
