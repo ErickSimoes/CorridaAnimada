@@ -48,6 +48,8 @@ public class CharacterSelectionController : MonoBehaviour {
 
         if (numToggleOn >= 2) {
             startButton.interactable = true;
+        } else {
+            startButton.interactable = false;
         }
 
         if (numToggleOn > 4) {
