@@ -17,6 +17,7 @@ public class CharacterSelectionController : MonoBehaviour {
         for (int i = 0; i < numChilds; i++) {
             toggles[i] = transform.GetChild(i).gameObject.GetComponent<Toggle>();
         }
+        FillCharacters();
     }
 
     void Update() {
@@ -38,6 +39,14 @@ public class CharacterSelectionController : MonoBehaviour {
 
         if (numToggleOn > 4) {
             myToggle.isOn = false;
+        }
+    }
+
+    private void FillCharacters() {
+        Pieces pieces = GameObject.FindGameObjectWithTag("Pieces").GetComponent<Pieces>();
+        
+        for (int i = 0; i < toggles.Length; i++) {
+            toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.sprites[i];
         }
     }
 }

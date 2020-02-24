@@ -7,6 +7,7 @@ TagManager:
   - VictoryPanel
   - Ground
   - ReferencePosition
+  - Pieces
   layers:
   - Default
   - TransparentFX
