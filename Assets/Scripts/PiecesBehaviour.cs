@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PiecesBehaviour : MonoBehaviour {
     public GameObject piece;
@@ -30,7 +31,12 @@ public class PiecesBehaviour : MonoBehaviour {
         }
 
         yFixPosition = new Vector3(0, piece.transform.position.y - referencePosition[0].transform.position.y, 0);
+
+        if (!piece.GetComponent<SpriteRenderer>().sprite) {
+            gameObject.SetActive(false);
+        }
     }
+    
     public void MoveToNextPosition() {
         if (referencePosition.Length > pieceReference) {
             targetPosition = referencePosition[pieceReference++].transform.position + yFixPosition;
