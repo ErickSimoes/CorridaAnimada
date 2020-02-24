@@ -8,11 +8,20 @@ public class CharacterSelectionController : MonoBehaviour {
 
     Toggle[] toggles;
     public Button startButton;
-    public GameObject PiecesSelected;
+    public GameObject piecesSelected;
 
     void Start() {
 
-        DontDestroyOnLoad(PiecesSelected);
+        GameObject[] piecesSelecteds = GameObject.FindGameObjectsWithTag("PiecesSelected");
+        if (piecesSelecteds.Length > 1) {
+            if (piecesSelected == piecesSelecteds[0]) {
+                Destroy(piecesSelecteds[1]);
+            } else {
+                Destroy(piecesSelecteds[0]);
+            }
+        }
+
+        DontDestroyOnLoad(piecesSelected);
 
         int numChilds = transform.childCount;
 
@@ -64,7 +73,7 @@ public class CharacterSelectionController : MonoBehaviour {
             }
         }
 
-        Pieces pieces = PiecesSelected.GetComponent<Pieces>();
+        Pieces pieces = piecesSelected.GetComponent<Pieces>();
         pieces.sprites = sprites;
 
         SceneManager.LoadScene("MainScene");

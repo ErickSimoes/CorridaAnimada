@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: {fileID: 823176846}
-  PiecesSelected: {fileID: 1912894592}
+  piecesSelected: {fileID: 1912894592}
 --- !u!114 &547964546
 MonoBehaviour:
   m_ObjectHideFlags: 0
