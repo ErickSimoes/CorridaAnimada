@@ -7,8 +7,12 @@ public class CharacterSelectionController : MonoBehaviour {
 
     Toggle[] toggles;
     public Button startButton;
-    
+    public GameObject PiecesSelected;
+
     void Start() {
+
+        DontDestroyOnLoad(PiecesSelected);
+
         int numChilds = transform.childCount;
         print(numChilds);
 
@@ -48,5 +52,19 @@ public class CharacterSelectionController : MonoBehaviour {
         for (int i = 0; i < toggles.Length; i++) {
             toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.sprites[i];
         }
+    }
+
+    public void StartGame() {
+
+        List<Sprite> sprites = new List<Sprite>();
+
+        foreach (Toggle toggle in toggles) {
+            if (toggle.isOn) {
+                sprites.Add(toggle.gameObject.GetComponentInChildren<Image>().sprite);
+            }
+        }
+
+        Pieces pieces = PiecesSelected.GetComponent<Pieces>();
+        pieces.sprites = sprites;
     }
 }
