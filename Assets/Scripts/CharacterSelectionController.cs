@@ -33,10 +33,6 @@ public class CharacterSelectionController : MonoBehaviour {
         FillCharacters();
     }
 
-    void Update() {
-
-    }
-
     public void ChechTogglesActiveis(Toggle myToggle) {
         int numToggleOn = 0;
 
