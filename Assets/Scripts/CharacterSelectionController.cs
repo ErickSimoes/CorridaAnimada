@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterSelectionController : MonoBehaviour {
@@ -66,5 +67,7 @@ public class CharacterSelectionController : MonoBehaviour {
 
         Pieces pieces = PiecesSelected.GetComponent<Pieces>();
         pieces.sprites = sprites;
+
+        SceneManager.LoadScene("MainScene");
     }
 }
