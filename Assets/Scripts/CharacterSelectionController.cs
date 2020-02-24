@@ -15,7 +15,6 @@ public class CharacterSelectionController : MonoBehaviour {
         DontDestroyOnLoad(PiecesSelected);
 
         int numChilds = transform.childCount;
-        print(numChilds);
 
         toggles = new Toggle[numChilds];
 
