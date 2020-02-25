@@ -468,7 +468,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Selecione at\xE9 4 personagens"
+  m_Text: Selecione os personagens
 --- !u!222 &166275868
 CanvasRenderer:
   m_ObjectHideFlags: 0
