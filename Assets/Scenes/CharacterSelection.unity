@@ -1598,6 +1598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 823176846}
   piecesSelected: {fileID: 1912894592}
+  maxPiecesSelected: 5
 --- !u!114 &547964546
 MonoBehaviour:
   m_ObjectHideFlags: 0

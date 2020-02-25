@@ -9,6 +9,7 @@ public class CharacterSelectionController : MonoBehaviour {
     Toggle[] toggles;
     public Button startButton;
     public GameObject piecesSelected;
+    public int maxPiecesSelected;
 
     void Start() {
 
@@ -48,7 +49,7 @@ public class CharacterSelectionController : MonoBehaviour {
             startButton.interactable = false;
         }
 
-        if (numToggleOn > 4) {
+        if (numToggleOn > maxPiecesSelected) {
             myToggle.isOn = false;
         }
     }
