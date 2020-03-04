@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class FillPieces : MonoBehaviour {
 
-    public Sprite[] sprites;
     Sprite[] spriteSelected;
     public GameObject piecesSelected;
 
@@ -15,7 +14,6 @@ public class FillPieces : MonoBehaviour {
 
         spriteSelected = piecesSelected.gameObject.GetComponent<Pieces>().sprites.ToArray();
 
-        sprites = new Sprite[spriteSelected.Length];
         for (int i = 0; i < spriteSelected.Length; i++) {
             transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().sprite = spriteSelected[i];
         }
