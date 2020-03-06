@@ -11,6 +11,9 @@ public class ButtonsController : MonoBehaviour {
     public GameObject piecePrefab;
     public GameObject piecesGroup;
     public Vector2 pieceReferencePosition;
+    public Transform ReferencePositionGroup;
+    public Transform StartReference;
+    public Transform EndReference;
 
     void Start() {
         piecesSelected = GameObject.FindGameObjectWithTag("PiecesSelected").GetComponent<Pieces>();
@@ -27,6 +30,14 @@ public class ButtonsController : MonoBehaviour {
             
             pieceReferencePosition += new Vector2(0, -4.5f);
         }
+
+        float xDistance = (EndReference.position.x - StartReference.position.x) / piecesSelected.numQuestion;
+        Vector3 objPosition = StartReference.transform.position;
+        for (int i = 0; i < piecesSelected.numQuestion; i++) {
+            objPosition += new Vector3(xDistance, 0);
+            Instantiate(new GameObject(), objPosition, Quaternion.identity, ReferencePositionGroup);
+        }
+        
 
     }
 

@@ -10,6 +10,7 @@ public class CharacterSelectionController : MonoBehaviour {
     public Button startButton;
     public GameObject piecesSelected;
     public int maxPiecesSelected;
+    public InputField inputNQuestions;
 
     void Start() {
 
@@ -79,6 +80,8 @@ public class CharacterSelectionController : MonoBehaviour {
         Pieces pieces = piecesSelected.GetComponent<Pieces>();
         pieces.buttons = buttons.ToArray();
         pieces.characters = characters.ToArray();
+
+        pieces.numQuestion = int.Parse(inputNQuestions.text);
 
         SceneManager.LoadScene("MainScene");
     }
