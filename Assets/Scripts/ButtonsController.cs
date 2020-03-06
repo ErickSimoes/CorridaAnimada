@@ -30,6 +30,12 @@ public class ButtonsController : MonoBehaviour {
 
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            BackToSelectionScene();
+        }
+    }
+
     public void BackToSelectionScene() {
         SceneManager.LoadScene("CharacterSelection");
     }
