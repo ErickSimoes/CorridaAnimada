@@ -5,9 +5,12 @@ using UnityEngine;
 public class TargetGroupController : MonoBehaviour {
 
     public GameObject piecesGroup;
+    public int waitTime;
+    public Transform[] startTargets;
+    Cinemachine.CinemachineTargetGroup targetGroup;
 
     void Start() {
-        Cinemachine.CinemachineTargetGroup targetGroup = GetComponent<Cinemachine.CinemachineTargetGroup>();
+        targetGroup = GetComponent<Cinemachine.CinemachineTargetGroup>();
         int numPieces = piecesGroup.transform.childCount;
         int radius = 2;
         for (int i = 0; i < numPieces; i++) {
@@ -17,5 +20,13 @@ public class TargetGroupController : MonoBehaviour {
             targetGroup.AddMember(piecesGroup.transform.GetChild(i), 1, radius);
         }
 
+        StartCoroutine(RemoveStartTargetMembers(waitTime));
+    }
+
+    IEnumerator RemoveStartTargetMembers(int waitTime) {
+        yield return new WaitForSeconds(waitTime);
+        for (int i = 0; i < startTargets.Length; i++) {
+            targetGroup.RemoveMember(startTargets[i].transform);
+        }
     }
 }
