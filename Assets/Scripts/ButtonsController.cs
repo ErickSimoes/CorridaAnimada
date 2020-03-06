@@ -16,19 +16,15 @@ public class ButtonsController : MonoBehaviour {
         piecesSelected = GameObject.FindGameObjectWithTag("PiecesSelected").GetComponent<Pieces>();
 
         for (int i = 0; i < piecesSelected.buttons.Length; i++) {
-            GameObject buttonGameObject = Instantiate(buttonPrefab, this.transform);
             GameObject pieceGameObject = Instantiate(piecePrefab, pieceReferencePosition, Quaternion.identity, piecesGroup.transform);
+            GameObject buttonGameObject = Instantiate(buttonPrefab, this.transform);
 
             pieceGameObject.GetComponent<SpriteRenderer>().sprite = piecesSelected.characters[i];
+            
             buttonGameObject.GetComponent<Image>().sprite = piecesSelected.buttons[i];
             buttonGameObject.GetComponent<Image>().type = Image.Type.Simple;
-            buttonGameObject.GetComponent<Image>().preserveAspect = true;
-
-
-            print(piecesSelected.buttons[i].name);
-            print(piecesSelected.characters[i].name);
-
             buttonGameObject.GetComponent<PiecesBehaviour>().piece = pieceGameObject;
+            
             pieceReferencePosition += new Vector2(0, -4.5f);
         }
 
