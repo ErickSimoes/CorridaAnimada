@@ -56,7 +56,7 @@ public class CharacterSelectionController : MonoBehaviour {
         Pieces pieces = GameObject.FindGameObjectWithTag("Pieces").GetComponent<Pieces>();
         
         for (int i = 0; i < toggles.Length; i++) {
-            toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.sprites[i];
+            //toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.sprites[i];
         }
     }
 
@@ -71,7 +71,7 @@ public class CharacterSelectionController : MonoBehaviour {
         }
 
         Pieces pieces = piecesSelected.GetComponent<Pieces>();
-        pieces.sprites = sprites;
+        //pieces.sprites = sprites;
 
         SceneManager.LoadScene("MainScene");
     }

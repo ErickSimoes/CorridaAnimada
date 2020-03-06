@@ -12,7 +12,7 @@ public class FillPieces : MonoBehaviour {
 
         piecesSelected = GameObject.FindGameObjectWithTag("PiecesSelected");
 
-        spriteSelected = piecesSelected.gameObject.GetComponent<Pieces>().sprites.ToArray();
+        //spriteSelected = piecesSelected.gameObject.GetComponent<Pieces>().sprites.ToArray();
 
         for (int i = 0; i < spriteSelected.Length; i++) {
             transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().sprite = spriteSelected[i];

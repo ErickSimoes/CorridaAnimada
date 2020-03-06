@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pieces : MonoBehaviour {
 
-    public List<Sprite> sprites;
-    
+    public List<Sprite> buttons;
+    public List<Sprite> characters;
+
 }
