@@ -56,22 +56,27 @@ public class CharacterSelectionController : MonoBehaviour {
         Pieces pieces = GameObject.FindGameObjectWithTag("Pieces").GetComponent<Pieces>();
         
         for (int i = 0; i < toggles.Length; i++) {
-            //toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.sprites[i];
+            toggles[i].GetComponent<PieceChoice>().sprites = new Sprite[1, 2] { { pieces.buttons[i], pieces.characters[i] } };
+            toggles[i].gameObject.GetComponentInChildren<Image>().sprite = pieces.buttons[i];
         }
     }
 
     public void StartGame() {
 
-        List<Sprite> sprites = new List<Sprite>();
+        List<Sprite> buttons = new List<Sprite>();
+        List<Sprite> characters = new List<Sprite>();
 
         foreach (Toggle toggle in toggles) {
             if (toggle.isOn) {
-                sprites.Add(toggle.gameObject.GetComponentInChildren<Image>().sprite);
+                PieceChoice pieceChoice = toggle.GetComponent<PieceChoice>();
+                buttons.Add(pieceChoice.sprites[0,0]);
+                characters.Add(pieceChoice.sprites[0, 1]);
             }
         }
 
         Pieces pieces = piecesSelected.GetComponent<Pieces>();
-        //pieces.sprites = sprites;
+        pieces.buttons = buttons.ToArray();
+        pieces.characters = characters.ToArray();
 
         SceneManager.LoadScene("MainScene");
     }
