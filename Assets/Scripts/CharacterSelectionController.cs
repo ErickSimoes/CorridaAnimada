@@ -24,13 +24,11 @@ public class CharacterSelectionController : MonoBehaviour {
 
         DontDestroyOnLoad(piecesSelected);
 
-        int numChilds = transform.childCount;
-
-        toggles = new Toggle[numChilds];
-
-        for (int i = 0; i < numChilds; i++) {
+        toggles = new Toggle[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++) {
             toggles[i] = transform.GetChild(i).gameObject.GetComponent<Toggle>();
         }
+
         FillCharacters();
     }
 
