@@ -3,5 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PieceChoice : MonoBehaviour {
-    public Sprite[,] sprites;
+    public Sprite button;
+    public Sprite character;
 }

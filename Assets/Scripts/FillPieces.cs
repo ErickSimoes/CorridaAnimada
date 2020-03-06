@@ -10,13 +10,13 @@ public class FillPieces : MonoBehaviour {
 
     void Start() {
 
-        piecesSelected = GameObject.FindGameObjectWithTag("PiecesSelected");
+        /*piecesSelected = GameObject.FindGameObjectWithTag("PiecesSelected");
 
         spriteSelected = piecesSelected.gameObject.GetComponent<Pieces>().characters;
 
         for (int i = 0; i < spriteSelected.Length; i++) {
             transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().sprite = spriteSelected[i];
-        }
+        }*/
     }
 
     public void BackToSelectionScene() {

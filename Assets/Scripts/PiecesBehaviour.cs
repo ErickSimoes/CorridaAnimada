@@ -31,13 +31,6 @@ public class PiecesBehaviour : MonoBehaviour {
         }
 
         yFixPosition = new Vector3(0, piece.transform.position.y - referencePosition[0].transform.position.y, 0);
-
-        if (piece.GetComponent<SpriteRenderer>().sprite) {
-            gameObject.GetComponent<Image>().sprite = piece.GetComponent<SpriteRenderer>().sprite;
-            gameObject.GetComponent<Image>().preserveAspect = true;
-        } else {
-            gameObject.SetActive(false);
-        }
     }
     
     public void MoveToNextPosition() {
