@@ -224,22 +224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 99c1db9f4fbc50b44975072e9f78b16c, type: 3}
-  - {fileID: 21300000, guid: 4758a55aef88ce649966d5bcbb20ad0f, type: 3}
-  - {fileID: 21300000, guid: f1c0306bd59d17040b2f2d22b5502774, type: 3}
-  - {fileID: 21300000, guid: 64a29c97cba5a2e41afa8dd2b70c8337, type: 3}
-  - {fileID: 21300000, guid: a3df89e3e6de9aa48b9da4641dc24204, type: 3}
-  - {fileID: 21300000, guid: 59ea022665027bc42b3a5802d0850211, type: 3}
-  - {fileID: 21300000, guid: d225186bec212b643ab740da8519925f, type: 3}
-  - {fileID: 21300000, guid: 978903e5270dec940bee430f1ca6389c, type: 3}
-  - {fileID: 21300000, guid: 932d74712e9e7f240a14ee4458a9c6d5, type: 3}
-  - {fileID: 21300000, guid: 0a83391c23c3a114f9841ddefa35881c, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
-  - {fileID: 21300000, guid: 87e29c74d6637104eb34eb7339654a63, type: 3}
+  - {fileID: 21300000, guid: ed854ca8eefe8c746954e95ad3e0fb41, type: 3}
+  - {fileID: 21300000, guid: 293d91f361396754f95290741d3abcfc, type: 3}
+  - {fileID: 21300000, guid: b80f27b344045ea44b5d140bf94e35f7, type: 3}
+  - {fileID: 21300000, guid: e1710236b2b9bc6489d543b6ab26cb51, type: 3}
+  - {fileID: 21300000, guid: bfedf0bd447d6414f99c4641522cb91a, type: 3}
+  - {fileID: 21300000, guid: d348865dea787d240bc60e537f164e59, type: 3}
+  - {fileID: 21300000, guid: 9745599239919754d8a9cd6946beb4a8, type: 3}
+  - {fileID: 21300000, guid: 9d8d3be0fa2078e4797b90df6e728aaf, type: 3}
+  - {fileID: 21300000, guid: 4721141ddbbab5a47b3da942836c8849, type: 3}
+  - {fileID: 21300000, guid: 435581c7494199c47b3c3dd8e92d655a, type: 3}
+  - {fileID: 21300000, guid: 98faf3476bc5d424b938e7d9bbf49db5, type: 3}
+  - {fileID: 21300000, guid: 659b0e29e6a2c04499f1585640831d33, type: 3}
 --- !u!4 &71756529
 Transform:
   m_ObjectHideFlags: 0
