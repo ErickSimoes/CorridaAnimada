@@ -55,7 +55,7 @@ public class CharacterSelectionController : MonoBehaviour {
 
     private void FillCharacters() {
         Pieces pieces = GameObject.FindGameObjectWithTag("Pieces").GetComponent<Pieces>();
-        
+
         for (int i = 0; i < toggles.Length; i++) {
             PieceChoice pieceChoice = toggles[i].GetComponent<PieceChoice>();
             pieceChoice.button = pieces.buttons[i];

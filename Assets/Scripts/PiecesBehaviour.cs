@@ -32,7 +32,7 @@ public class PiecesBehaviour : MonoBehaviour {
 
         yFixPosition = new Vector3(0, piece.transform.position.y - referencePosition[0].transform.position.y, 0);
     }
-    
+
     public void MoveToNextPosition() {
         if (referencePosition.Length > pieceReference) {
             targetPosition = referencePosition[pieceReference++].transform.position + yFixPosition;
