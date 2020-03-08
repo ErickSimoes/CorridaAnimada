@@ -10,6 +10,8 @@ public class CharacterSelectionController : MonoBehaviour {
     public GameObject piecesSelected;
     public int maxPiecesSelected;
     public InputField inputNQuestions;
+    public AudioSource clickSound;
+    public AudioClip click, error;
 
     void Start() {
 
@@ -49,6 +51,9 @@ public class CharacterSelectionController : MonoBehaviour {
 
         if (numToggleOn > maxPiecesSelected) {
             myToggle.isOn = false;
+            clickSound.clip = error;
+        } else {
+            clickSound.clip = click;
         }
     }
 
