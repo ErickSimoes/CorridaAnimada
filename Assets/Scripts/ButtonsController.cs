@@ -23,11 +23,11 @@ public class ButtonsController : MonoBehaviour {
             GameObject buttonGameObject = Instantiate(buttonPrefab, this.transform);
 
             pieceGameObject.GetComponent<SpriteRenderer>().sprite = piecesSelected.characters[i];
-            
+
             buttonGameObject.GetComponent<Image>().sprite = piecesSelected.buttons[i];
             buttonGameObject.GetComponent<Image>().type = Image.Type.Simple;
             buttonGameObject.GetComponent<PiecesBehaviour>().piece = pieceGameObject;
-            
+
             pieceReferencePosition += new Vector2(0, -4.5f);
         }
 
@@ -37,7 +37,6 @@ public class ButtonsController : MonoBehaviour {
             objPosition += new Vector3(xDistance, 0);
             Instantiate(new GameObject(), objPosition, Quaternion.identity, ReferencePositionGroup);
         }
-        
 
     }
 
