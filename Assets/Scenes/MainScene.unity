@@ -333,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254881567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.800001, y: 2.59, z: -10}
+  m_LocalPosition: {x: 5.800001, y: 2.59, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 855345671}
@@ -612,7 +612,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 23.364174
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -636,7 +636,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.800001, y: 2.59, z: -10}
+  m_LocalPosition: {x: 5.800001, y: 2.59, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -824,7 +824,7 @@ MonoBehaviour:
   piecePrefab: {fileID: 1675518402657324852, guid: 536cb2e2db3bbe847b7b58962601ff48,
     type: 3}
   piecesGroup: {fileID: 310961589}
-  pieceReferencePosition: {x: -30, y: 8.5}
+  pieceReferencePosition: {x: -30, y: 10}
   ReferencePositionGroup: {fileID: 1408573227}
   StartReference: {fileID: 1568559587}
   EndReference: {fileID: 1507695073}
