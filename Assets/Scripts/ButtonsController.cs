@@ -9,6 +9,8 @@ public class ButtonsController : MonoBehaviour {
     public GameObject piecePrefab;
     public Transform piecesGroup;
     public Vector2 pieceReferencePosition;
+    [Range(0f, 10f)]
+    public float stepY;
     public Transform ReferencePositionGroup;
     public Transform StartReference;
     public Transform EndReference;
@@ -26,7 +28,7 @@ public class ButtonsController : MonoBehaviour {
             buttonGameObject.GetComponent<Image>().type = Image.Type.Simple;
             buttonGameObject.GetComponent<PiecesBehaviour>().piece = pieceGameObject;
 
-            pieceReferencePosition += new Vector2(0, -4.5f);
+            pieceReferencePosition += new Vector2(0, -stepY);
         }
 
         float xDistance = (EndReference.position.x - StartReference.position.x) / piecesSelected.numQuestion;
